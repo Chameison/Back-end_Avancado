@@ -1,24 +1,31 @@
-
-let num1 = document.querySelector('#num1');
-let num2 = document.querySelector('#num2');
-let opera = document.querySelector('#opera');
-let form = document.querySelector("#form");
-console.log(num1)
-console.log(num2)
-console.log(opera)
-let num3 = 10
-console.log(num3)
-
-function resultado() {
-    if(opera == '+') {
-        console.log(num1+num2);
-    }
-    if(opera == '-'){
+function calcular() {
+    let resultado
+    let numero1 = document.getElementById('num1').value;
+    numero1 = parseFloat(numero1)
+    let numero2 = document.getElementById('num2').value;
+    numero2 = parseFloat(numero2)
+    let opera = document.getElementById('opera').value;
     
+    if(opera == '+') {
+        resultado = numero1 + numero2;
     }
+    else if(opera == '-'){
+        resultado = numero1 - numero2
+    }
+    else if (opera == '*') {
+        resultado = numero1 * numero2;
+    }
+    else if (opera == '/') {
+        resultado = numero1 / numero2
+    }
+    document.getElementById('result').innerHTML = 'Resultado: ' +  resultado;
 }
-document.getElementById.onclick = function(e) {
-    alert(resultado())
+function calcu(){
+    let formData = new FormData(document.querySelector('form'));
+    let n1 = formData.get('n1')
+    n1 = parseFloat(n1)
+    let n2 = formData.get('n2')
+    n2 = parseFloat(n2)
+    let opera = formData.get('opera')
 }
 
-https://pt.stackoverflow.com/questions/469931/n%C3%A3o-consigo-pegar-valor-do-input-javascript
