@@ -150,44 +150,139 @@
 // //DESAFIO 2 - AULA 03
 // let i
 
-const vetor1 = [1,2,3,4,5]
-const obj = {n1 : vetor1[0], n2: vetor1[1], n3: vetor1[2], n4: vetor1[3], n5: vetor1[4]}
+// const vetor1 = [1,2,3,4,5]
+// const obj = {n1 : vetor1[0], n2: vetor1[1], n3: vetor1[2], n4: vetor1[3], n5: vetor1[4]}
 
 
-let num1 = obj.n1
-let num2 = obj.n2
-let num3 = obj.n3
-let num4 = obj.n4
-let num5 = obj.n5
+// let num1 = obj.n1
+// let num2 = obj.n2
+// let num3 = obj.n3
+// let num4 = obj.n4
+// let num5 = obj.n5
 
-//forma alternativa, fiz a de cima
-const {nn1, nn2, nn3, nn4, nn5} = obj
+// //forma alternativa, fiz a de cima
+// const {nn1, nn2, nn3, nn4, nn5} = obj
 
-console.log(nn2)
+// console.log(nn2)
 
-console.log(num1)
-console.log(num2)
-console.log(num3)
-console.log(num4)
-console.log(num5)
+// console.log(num1)
+// console.log(num2)
+// console.log(num3)
+// console.log(num4)
+// console.log(num5)
 
-console.log('{"n1":'+num1+', "n2":'+num2+', "n3": '+num3+', "n4": '+num4+', "n5": '+num5+'}')
+// console.log('{"n1":'+num1+', "n2":'+num2+', "n3": '+num3+', "n4": '+num4+', "n5": '+num5+'}')
 
 //fim primeiro
 
 //desafio 2 resoluçãp
-let numero1 = 10
-let numero2 = 20
-const calc = {
-    soma: numero1 + numero2,
-    sub: numero1 - numero2,
-    mult: numero1 * numero2,
-    div: numero1 / numero2
-}
-console.log(JSON.stringify(calc))
-//estruturas, metodos de listas, funcoes
+// let numero1 = 10
+// let numero2 = 20
+// const calc = {
+//     soma: numero1 + numero2,
+//     sub: numero1 - numero2,
+//     mult: numero1 * numero2,
+//     div: numero1 / numero2
+// }
+// console.log(JSON.stringify(calc))
+// //estruturas, metodos de listas, funcoes
 
-const n = 100
-if(n > 100){
+// const n = 100
+// if(n > 100){
     
+// }
+
+//AULA 04
+
+// const a = 5
+// const b = 10
+// const out = ('Quinze é ' + (a+b) + '\ne não ' + (2*a+b) + '.')
+
+// console.log(out)
+// const out2 = (`Quinzé é ${a+b} \nNão é  ${2*(a+b)} .` )
+// console.log(out2)
+
+// //metodos de arrays 
+
+// const names = ['Victor', 'Paulo', 'Chameison', 'John']
+
+// names.forEach(function(name){ //forEach
+//     console.log(name) 
+// })
+
+// const modifiedNames = names.map(function(name) {//map = pegar informaç~pes
+//     if(name == 'Chameison')
+//         return ('Chameison Araújo')
+//     else 
+//         return name
+// })
+
+// console.log(modifiedNames)
+
+// modifiedNames.forEach(function(name) {
+//     console.log(name)
+// })
+
+// //filter 
+// const vetorEx = [1,5,7,9,5,24,79,343,757,893,3475,764].filter(function(num){
+
+//     if(num < 10)     //pode ser somente return name < 10 p
+//         return num  
+// })
+// vetorEx.forEach(function(num) {
+//     console.log(num)
+// })
+
+// const somaVetor = vetorEx.reduce(function(num, num2){
+//     return num+num2
+// })
+
+// console.log(somaVetor)
+
+// //funções 
+// //pesquisar mais sobre funções anonimas
+
+
+// function firstFunction(name, surname, idade, altura) {
+//     return `O nome completo é ${name} ${surname} e estou com ${idade} anos e ${altura} m de altura`
+// }
+const pessoa = {
+    nome: "Chameison",
+    sobrenome: "Araujo",
+    idade: 20,
+    altura: 1.7,
+    data: '03/04/2002'
 }
+console.log(firstFunction(pessoa.nome, pessoa.sobrenome, pessoa.idade, pessoa.altura)) 
+
+//arrow function === função anônima
+//=>
+// function(data)
+//pesquisar sobre fetch]
+
+const myArrowFunction = function(a,b, opera){
+    if(opera == 'sum') {
+        return a + b
+    }
+    if(opera == 'sub') {
+        return a - b
+    }
+    if(opera == 'div') {
+        return a / b
+    }
+    if(opera == 'multi') {
+        return a * b
+    }
+}
+
+console.log(myArrowFunction(20, 10, 'sub'))
+
+//desafio 01 da aula 04
+
+const ArrowSoma = (x) => () => (x + 5)
+
+console.log(ArrowSoma())
+
+
+
+// () = ( (x=7) => (x+5) )
