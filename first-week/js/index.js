@@ -204,7 +204,7 @@
 
 // //metodos de arrays 
 
-// const names = ['Victor', 'Paulo', 'Chameison', 'John']
+const names = ['Victor', 'Paulo', 'Chameison', 'John']
 
 // names.forEach(function(name){ //forEach
 //     console.log(name) 
@@ -243,9 +243,9 @@
 // //pesquisar mais sobre funções anonimas
 
 
-// function firstFunction(name, surname, idade, altura) {
-//     return `O nome completo é ${name} ${surname} e estou com ${idade} anos e ${altura} m de altura`
-// }
+function firstFunction(name, surname, idade, altura) {
+    return `O nome completo é ${name} ${surname} e estou com ${idade} anos e ${altura} m de altura`
+}
 const pessoa = {
     nome: "Chameison",
     sobrenome: "Araujo",
@@ -279,10 +279,124 @@ console.log(myArrowFunction(20, 10, 'sub'))
 
 //desafio 01 da aula 04
 
-const ArrowSoma = (x) => () => (x + 5)
+const ArrowSoma = (x = 7) => () => (x + 5)
 
 console.log(ArrowSoma())
+const newArrow = () => ((x=7), ()=> (x+5)) ()
+
+console.log(newArrow)
 
 
 
 // () = ( (x=7) => (x+5) )
+
+
+//AULA 05
+
+const modifiedNames = names.map(function(name) {//map = pegar informaç~pes
+    if(name == 'Chameison')
+        return ('Chameison Araújo')
+    else 
+        return name
+})
+
+console.log(modifiedNames)
+
+const namesLength = names.map(function(value){
+    return value.length
+})
+
+console.log(namesLength)
+//funcao anomina = arrow function
+const namesArrow = names.map( value => value.length)
+const namesObjArrow = names.map( ({length}) => length)
+const names1 = names[1]
+console.log(namesArrow)
+console.log(namesObjArrow)
+console.log(names1)
+
+
+let varX = 50
+function out(){
+    function sumXand5(){
+        return varX+5
+    }
+    return sumXand5()
+}
+console.log(out())
+
+function one(){
+
+}
+
+//orientação em objeto 
+
+class Product {
+    constructor(name, price){ //this especifica 
+        this.name = name
+        this.price = price
+    }
+
+    productDetails() {
+        console.log(`O nome do produto é ${this.name} e atualmente estar com o preço de $ ${this.price}.`)
+    }
+    productDetails2() {
+        return `O nome do produto é ${this.name} e atualmente estar com o preço de $ ${this.price}.`
+    }
+
+    static test() {
+        console.log('Testando método estatico')//
+    }
+}
+
+//em alguns exemplos podemos usar 
+//instanciando um objeto Product
+const bot = new Product('New Balance Black Edition', 199.99)
+const shirt = new Product('Polo White Blue', 69.99)
+
+shirt.productDetails()
+bot.productDetails()
+
+Product.test()
+
+console.log(bot.productDetails2())
+console.log(shirt)
+
+//herança 
+class Tenis extends Product {
+    constructor(name, price, size){
+        super(name, price)
+        this.size = size
+    }
+    showNumber() {
+        return `O tamanho do ${this.name} é de ${this.size} e custa um total de $ ${this.price}.`
+    }
+}
+
+const tenisNike = new Tenis('Nike Air Grey', 299.99, 41)
+//mudar o nome por exemplo
+tenisNike.name = 'Nike Black Edition'
+console.log(tenisNike.showNumber())
+
+
+//DOM Document Object Model
+
+//modelo antigo
+console.log(document.getElementById('titulo'))
+console.log(document.getElementsByClassName('text'))
+//modelo novo
+
+const texts = document.querySelectorAll('.text')
+console.log(texts)
+
+texts.forEach((data) => console.log(data))
+
+texts[0].textContent = 'Estou alterando o primeiro paragrafo'
+
+texts[1].style.backgroundColor = 'green'
+
+texts[2].remove()
+
+const button = document.querySelector('#btn')
+
+button.addEventListener('click', ()=>(texts[3].style.backgroundColor = 'black'))
