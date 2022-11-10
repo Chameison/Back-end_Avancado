@@ -69,7 +69,7 @@ function pegarData (){
 }
 setTimeout(pegarData, 5000)
 
-setInterval(pegarData, 2000)
+setTimeout(pegarData, 2000)
 setTimeout(pegarData, 5000)
 
 // const data = new Date('November 09, 2022 20:12:30');
