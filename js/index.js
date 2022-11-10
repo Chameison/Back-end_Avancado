@@ -400,3 +400,12 @@ texts[2].remove()
 const button = document.querySelector('#btn')
 
 button.addEventListener('click', ()=>(texts[3].style.backgroundColor = 'black'))
+
+
+//AULA 06 ->> AULA06 /node-day-one
+//callbacks
+
+//promises
+
+//programação assincrona
+//
