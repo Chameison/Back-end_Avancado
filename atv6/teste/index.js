@@ -1,0 +1,52 @@
+
+  fetch('https://jsonplaceholder.typicode.com/users')
+  .then(T => T.json())
+
+  .then(function (dado){
+    return dado.map(function (item) {
+      const li = document.createElement(`li`)
+      li.innerHTML = `nome: ${item.nome} emai: ${item.email}`
+      const 
+    })
+  })
+  console.log(dado())
+
+  function cadastraUsuario (body) {
+    const options = {
+      method: 'POST',
+      body: Object.keys(body)
+        .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(body[k])}`)
+        .join('&')
+    }
+
+  //   return fetch('http://exemplo.com/usuario', options)
+  //     .then(T => T.json())
+  // }
+
+  cadastraUsuario({ nome: 'Bruno', sobrenome: 'Carvalho de Araujo' })
+    .then(() => console.log('cadastrado'))
+    .catch(() => console.log('falha ao cadastrar'))
+
+  
+  // .then(console.log)
+
+  // requisição com o XMLHttpRequest
+  // const request = new XMLHttpRequest()
+
+  // request.open('GET', 'http://exemplo.com/usuario')
+
+  // request.onload = function () {
+  //   console.log(JSON.parse(this.responseText))
+  // }
+
+  // request.onerror = function () {
+  //   console.log('erro ao executar a requisição')
+  // }
+
+  // request.send()
+
+  // fetch(input: string, {
+  //   method?: "GET" | "POST" | "PUT" | "DELETE",
+  //   mode?: "navigate" | "same-origin" | "no-cors" | "cors",
+  //   headers?: { [ key: string ]: any }
+  // }): Promise<Response>
