@@ -6,7 +6,7 @@
     return dado.map(function(item){
       const li = document.createElement('li')
       li.innerHTML = `nome: ${item.name} emai: ${item.email}`
-      document.getElementById('nome').appendChild('li')
+      document.querySelector('ul').appendChild(li)
     })
   })
 
