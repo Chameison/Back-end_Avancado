@@ -1,5 +1,5 @@
 
-  fetch('https://jsonplaceholder.typicode.com/users')
+  fetch('ahttps://jsonplaceholder.typicode.com/users')
   .then(resposta => resposta.json())
 
   .then(function (dado){
@@ -9,6 +9,23 @@
       document.querySelector('ul').appendChild(li)
     })
   })
+  .catch((error) => {
+    const li = document.createElement('li')
+    li.innerHTML = "Houve um erro"
+    document.querySelector('ul').appendChild(li)
+  })
+
+  // fetch('atv6/teste.json')
+  // .then(re => re.json())
+
+  // .then(function (dados){
+  //   return dados.map(function(item){
+  //     const li = document.createElement('li')
+  //     li.innerHTML = `raca: ${item.raca} nome: ${item.name}`
+  //     document.querySelector('ul').appendChild(li)
+  //   })
+  // })
+
 
 
 //   function cadastraUsuario (body) {
