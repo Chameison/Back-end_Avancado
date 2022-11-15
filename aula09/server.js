@@ -5,17 +5,31 @@ const fs = require('fs')
 //
 http.createServer((req, res)=>{
 
-    if(req.url === '/'){
+    const file = req.url === '/' ? 'index.html' : req.url  //operador ternario
+    const filePath = path.join(__dirname, 'public', file)
+
+    //pegando extensao do documento
+    const extName = path.extName(filePath)
+
+    //criando vetor dos que sao permitidos 
+    const allowedFilesTypes = ['.html', '.js', '.css']
+
+    //criando uma estrturoa que informamos quais arquivo podem passar e quais nao, definindo 
+    // o rumo do servidor
+    const allowed = allowedFilesTypes.find(
+        (item) => item === extName 
+    )
+
+    //
+    if (!allowed) return 
+    
+    //defifnindo as rotas para a aplicação
         fs.readFile(
-            path.join(__dirname, 'public', 'index.html'), 
+            filePath, 
             (err, content) => {
                 if(err) throw err
                 res.end(content)
                 }
-            )
-    }
-    if(req.url === '/contato') 
-        res.write('<h1>Contato</h1>')
-
-    res.end(console.log(req))
-}).listen(5000, () => (console.log('Servidor rodando...')))
+        )
+    
+}).listen(7500, () => (console.log('Servidor rodando...')))
