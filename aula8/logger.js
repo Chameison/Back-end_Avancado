@@ -1,8 +1,9 @@
 // const EventEmitter = require('events')
 const Evento = require('events')
 const fs = require('fs')
-const emitter = new Evento()
 const path = require('path')
+
+const emitter = new Evento()
 // emitter.on('log' , (message) => {
 //     fs.appendFile( './log.txt', message, (erro)=> {
 //         if(erro)
@@ -11,18 +12,17 @@ const path = require('path')
 //     console.log(message)
 // })
 
-emitter.on('log' , (message, obj) => {
-    fs.appendFile( path.join(__dirname, 'log.txt'), obj, (erro)=> {
-        if(erro)
-            throw erro
+emitter.on('log' , (message, object) => {
+    fs.appendFile(path.join(__dirname,'log.txt'),
+    object+'\n', 
+    (err) => {
+        if(err) throw err
     })
     console.log(message)
 })
 
-function log (message,obj) {
-    emitter.emit('log', message, obj)
+function log (message,object) {
+    emitter.emit('log', message, object)
 }
 
 module.exports = log
-log('primeiro teste')
-log('segundo teste')
