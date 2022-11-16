@@ -51,8 +51,8 @@ setInterval( () => {
     console.log("++++++++++++++++++--------------   STATUS DE MEMORIA     ------------++++++++++++++++++++++")
     console.table(main)
 
-    log('pe de rato', JSON.stringify(main))
-}, 1000)
+    log('Testando', JSON.stringify(main))
+}, 100)
 
-console.log("++++++++++++++++++--------------   STATUS DE REDE     ------------++++++++++++++++++++++")
-console.log(infoRedes)
+// console.log("++++++++++++++++++--------------   STATUS DE REDE     ------------++++++++++++++++++++++")
+// console.log(infoRedes)
