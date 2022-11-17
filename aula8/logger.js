@@ -11,18 +11,16 @@ const path = require('path')
 //     console.log(message)
 // })
 
-emitter.on('log' , (message, obj) => {
-    fs.appendFile( path.join(__dirname, 'log.txt'), obj, (erro)=> {
+emitter.on('log' , (message, object) => {
+    fs.appendFile( path.join(__dirname, 'log.txt'), object, (erro)=> {
         if(erro)
             throw erro
     })
     console.log(message)
 })
 
-function log (message,obj) {
-    emitter.emit('log', message, obj)
+function log (message,object) {
+    emitter.emit('log', message, object)
 }
 
 module.exports = log
-log('primeiro teste')
-log('segundo teste')

@@ -6,7 +6,7 @@ const fs = require('fs')
 http.createServer((req, res)=>{
 
     const file = req.url === '/' ? 'index.html' : req.url  //operador ternario
-    const filePath = path.join(__dirname, 'public', file)
+    const filePath = path.join(__dirname, 'public',file)
 
     //pegando extensao do documento
     const extName = path.extName(filePath)
@@ -24,12 +24,12 @@ http.createServer((req, res)=>{
     if (!allowed) return 
     
     //defifnindo as rotas para a aplicação
-        fs.readFile(
-            filePath, 
-            (err, content) => {
-                if(err) throw err
-                res.end(content)
-                }
-        )
+    fs.readFile(
+        filePath, 
+        (err, content) => {
+            if(err) throw err
+            res.end(content)
+            }
+    )
     
-}).listen(7500, () => (console.log('Servidor rodando...')))
+}).listen(6000, () => (console.log('Servidor rodando...')))
