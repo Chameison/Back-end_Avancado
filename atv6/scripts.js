@@ -1,5 +1,5 @@
 
-  fetch('ahttps://jsonplaceholder.typicode.com/users')
+  fetch('https://jsonplaceholder.typicode.com/users')
   .then(resposta => resposta.json())
 
   .then(function (dado){
