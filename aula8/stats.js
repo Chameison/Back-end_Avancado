@@ -7,7 +7,7 @@ const log = require('./logger.js')
 // const user = os.userInfo()//informações do usuasiro
 // const freMemory = os.freemem()
 // const totalM = os.totalmem()
-const infoRedes = os.networkInterfaces()
+// const infoRedes = os.networkInterfaces()
 // const infoPlatform = os.platform()
 
 
@@ -40,7 +40,7 @@ setInterval( () => {
     const used = all - freeMe
     const porcent = parseInt((used/all) * 100)
 
-    console.log(`A memoria esta com ${porcent} % utilizado`)
+    // console.log(`A memoria esta com ${porcent} % utilizado`)
 
     const main = {
         total: `${all} GB`,

@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header.cabecalho{
+    background-color: #ccc;
+    height: 100px;
+}
+footer.footer{
+    background-color: #ccc;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    flex-wrap: wrap;
+}
+
+div.container{
+    text-align: center;
+    border: 1px solid black;
+    font-size: 30px;
+    padding:200px 0px ;
+}
+div.container input{
+    padding: 10px;
+    /* background-color: rgba(0, 0, 0, 10); */
+    border-radius: 10px;
+}
+div.aviso p {
+    color: rgb(184, 79, 79);
+}
