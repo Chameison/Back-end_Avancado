@@ -380,7 +380,7 @@ console.log(tenisNike.showNumber())
 
 
 //DOM Document Object Model
-
+ 
 //modelo antigo
 console.log(document.getElementById('titulo'))
 console.log(document.getElementsByClassName('text'))

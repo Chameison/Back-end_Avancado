@@ -58,3 +58,11 @@ footer.footer{
     padding: 0 10px;
     font-weight: normal;
 }
+
+
+div.table li {
+    width: 50%;
+}
+div.table button{
+    width: 50%;
+}
