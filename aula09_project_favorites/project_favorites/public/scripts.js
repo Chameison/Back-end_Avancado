@@ -6,14 +6,14 @@ var campo = document.getElementById('url');
 
 form.addEventListener('submit', function(e) {
     
-    alert(campo.value);
+    alert("Link inserido com sucesso!");
     console.log(campo.value)
     const li = document.createElement('li')
     li.innerHTML = `<a href="${campo.value}">${campo.value}</a> `
     document.querySelector('ul').appendChild(li)
-    // const apagar = document.createElement('button')
-    // apagar.innerHTML = `<button id="" type="button">apagar</button>`
-    // document.querySelector('ul').appendChild(apagar)
+    const apagar = document.createElement('button')
+    apagar.innerHTML = `<button id="" type="button">apagar</button>`
+    document.querySelector('ul').appendChild(apagar)
     // console.log(i)
     
     // impede o envio do form
