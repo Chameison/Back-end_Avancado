@@ -1,16 +1,3 @@
-// function myFunction(){
-//     const data = new Date()
-//     const hora = data.getHours()
-//     const minutos = data.getMinutes()
-//     const segundos = data.getSeconds()
-    
-//     const string = `são agora ${hora}:${minutos}:${segundos}`
-//     console.log(string)
-//     }
-//     setTimeout(myFunction, 5000)
-  
-//     console.log("Chameison Araujo")
-
 
 function pegarData (){
     const date = new Date(Date.now())
